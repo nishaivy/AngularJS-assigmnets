@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Employee Signup</h1>
+          <h5>IVY Comptech</h5>
+          <hr>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input formControlName="name" placeholder="Enter name" type="name" class="form-control">
+          </div>
+
+
+          <div class="mb-3">
+            <label class="form-label">Mobile Number</label>
+            <input formControlName="mobile" placeholder="Enter number" type="number" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+            <span *ngIf="signupForm.get('mobile')?.touched && signupForm.get('mobile')?.hasError('required')">Mobile
+              number is Required</span>
+            <span *ngIf="signupForm.get('mobile')?.touched && signupForm.get('mobile')?.hasError('pattern')">Please enter
+              valid Mobile Number</span>
+
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Id</label>
+            <input formControlName="email" placeholder="Enter email" type="email" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+              <span *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.hasError('required')">Email is Required</span>
+              <span *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.hasError('email')">Enter a valid Email Address</span>
+
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input formControlName="address" placeholder="Enter address" type="name" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            <span *ngIf="signupForm.get('address')?.touched && signupForm.get('address')?.hasError('required')">Address is
+              Required</span>
+            <span *ngIf="signupForm.get('address')?.touched && signupForm.get('address')?.hasError('minlength')">Address must be
+              atleast 10 characters
+
+            </span>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">City</label>
+            <input formControlName="city" placeholder="Enter city" type="name" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            <span *ngIf="signupForm.get('city')?.touched && signupForm.get('city')?.hasError('required')">City is
+              Required</span>
+            <span *ngIf="signupForm.get('city')?.touched && signupForm.get('city')?.hasError('minlength')">City must be
+              atleast 3 characters
+
+            </span>
+            <span *ngIf="signupForm.get('city')?.touched && signupForm.get('city')?.hasError('pattern')">City should
+              contain alphabets only</span>
+
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Country</label>
+            <input formControlName="country" placeholder="Enter country" type="name" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp">
+
+            <span *ngIf="signupForm.get('country')?.touched && signupForm.get('country')?.hasError('required')">Country is
+              Required</span>
+            <span *ngIf="signupForm.get('country')?.touched && signupForm.get('country')?.hasError('minlength')">Country must be
+              atleast 3 characters
+
+            </span>
+            <span *ngIf="signupForm.get('country')?.touched && signupForm.get('country')?.hasError('pattern')">Country should
+              contain alphabets only</span>
+
+          </div>
+
+
+
+          <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid" >Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

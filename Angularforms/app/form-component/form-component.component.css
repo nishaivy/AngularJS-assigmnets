@@ -1,0 +1,17 @@
+div{
+    text-align: center;
+}
+
+button{
+    color: blue;
+}
+
+.alert-danger{
+    background-color: red;
+}
+
+.alert{
+    color:white;
+    margin-bottom: 15px;
+    text-align: center;
+}
