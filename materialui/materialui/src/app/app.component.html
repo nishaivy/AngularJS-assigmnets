@@ -1,0 +1,93 @@
+<header>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon class="menu">menu</mat-icon>
+    </button>
+    <span style="padding-left: 10px;">My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+<header>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem">Item 1</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+      <mat-list-item role="listitem">Item 4</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <div class="flex-container">
+    <div>
+      <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Item 1</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+       </mat-card-content>
+      </mat-card>
+     </div>
+
+     <div>
+      <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Item 2</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+       </mat-card-content>
+      </mat-card>
+     </div>
+
+     <div>
+      <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Item 3</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+       </mat-card-content>
+      </mat-card>
+     </div>
+
+     <div>
+      <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title>Item 4</mat-card-title>
+        <mat-card-subtitle>Small</mat-card-subtitle>
+        <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      </mat-card-title-group>
+      <mat-card-content>
+        {{longText}}
+       </mat-card-content>
+      </mat-card>
+     </div>
+
+    </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- Cards with media area -->
+
+<footer >
+    <mat-toolbar color="secondary">
+
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+<p class="footers">created by Nisha Hiremani</p>
+</footer>
